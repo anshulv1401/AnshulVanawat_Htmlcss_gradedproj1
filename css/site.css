@@ -96,8 +96,10 @@ header {
 
 .ad-slideshow>div>img {
     width: 100%;
-    height: calc(100vh - 200px);
-    border: solid steelblue;
+    height: auto;
+    max-height: 400px;
+    min-height: 300px;
+    border: solid rgb(11, 12, 14);
     top: 0;
     left: 0;
 }
@@ -150,7 +152,7 @@ header {
 
 #covidcare,
 #diabetescare {
-    margin: 10px;
+    margin: 30px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
