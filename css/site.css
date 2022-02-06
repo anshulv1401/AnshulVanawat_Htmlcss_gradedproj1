@@ -1,7 +1,12 @@
+/* General */
+
 .list-unstyled {
     list-style-type: none;
     margin: 0;
 }
+
+
+/* Header */
 
 header {
     font-weight: bolder;
@@ -11,6 +16,9 @@ header {
     background-color: #4f4f4f;
     color: white;
 }
+
+
+/* Nav Bar */
 
 #navigate {
     position: -webkit-sticky;
@@ -64,18 +72,147 @@ header {
     display: block;
 }
 
-.ad>img {
+
+/* Animated Ad Slideshow */
+
+.ad-slideshow {
     width: 100%;
     height: 100%;
-    border: solid steelblue;
+    position: relative;
 }
+
+.ad-slideshow>img {
+    width: 100%;
+    height: calc(100vh - 200px);
+    border: solid steelblue;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: 10s autoplay1 infinite
+}
+
+.ad-slideshow>*:nth-child(1) {
+    animation-delay: 0s
+}
+
+.ad-slideshow>*:nth-child(2) {
+    animation-delay: 2s
+}
+
+.ad-slideshow>*:nth-child(3) {
+    animation-delay: 4s
+}
+
+.ad-slideshow>*:nth-child(4) {
+    animation-delay: 6s
+}
+
+.ad-slideshow>*:nth-child(5) {
+    animation-delay: 8s
+}
+
+@keyframes autoplay1 {
+    0% {
+        visibility: visible
+    }
+    20% {
+        visibility: hidden
+    }
+}
+
+
+/* Products */
+
+#covidcare,
+#diabetescare {
+    margin: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.product-container {
+    position: relative;
+    margin: 5px;
+    width: 200px;
+    height: 220px;
+    border: 2px solid green;
+    display: inline-block;
+    background-color: lavender;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product {
+    padding: 5%;
+}
+
+.product img {
+    border-radius: 10px;
+    width: 180px;
+    height: 120px;
+    align-items: center;
+}
+
+.product>p {
+    padding: 0%;
+    margin: 0%;
+    color: #003171;
+}
+
+.product-name {
+    padding: 0%;
+    margin: 0%;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.product>a {
+    font-size: 1.1em;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: #E9CFFB;
+    color: orange;
+    padding: 2px 6px 2px 6px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    display: block;
+    width: 165px;
+    text-align: center;
+    /* text-decoration: none;
+    padding: 0%;
+    margin: 0%; */
+}
+
+.product>a:focus {
+    background-color: rgb(250, 234, 230);
+    border-color: rgb(0, 255, 76);
+}
+
+.product-container:hover {
+    width: 220px;
+    height: 240px;
+}
+
+.product-container:hover img {
+    width: 190px;
+    height: 130px;
+}
+
+.product-container:hover a {
+    width: 175px;
+}
+
+
+/* footer */
 
 footer {
     background-color: black;
     color: white;
-    width: 100%;
-    height: 70px;
-    position: fixed;
-    text-align: center;
+    padding: 20px;
+    position: relative;
     bottom: 0%;
+    text-align: center;
 }
