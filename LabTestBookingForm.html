@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Lab Test Booking Form</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <section class="form-container">
+        <div class="form">
+            <form action="">
+                <h2>1. Your Contact Details</h2>
+                <article>
+                    <h3>Full Name</h3>
+                    <input type="text" name="fullname" id="fullname" placeholder="Full Name" required="true">
+                </article>
+
+                <article>
+                    <h3>Patient Id if exists</h3>
+                    <input type="text" name="patientid" id="patientid" placeholder="Patient Id if exists" required>
+                </article>
+
+                <article>
+                    <h3>Contact Number</h3>
+                    <input type="number" min="6000000000" max="9999999999" name="contactnumber" id="contactnumber" placeholder="Contact Number" required>
+                </article>
+
+                <article>
+                    <h3>Email Address</h3>
+                    <input type="email" name="email" id="email" placeholder="Email Id" required>
+                </article>
+
+                <h2>2. Address</h2>
+                <article>
+                    <h3>House Number</h3>
+                    <input type="text" name="housenumber" id="housenumber" placeholder="House Number" required="true">
+
+                    <h3>Street</h3>
+                    <input type="text" name="street" id="street" placeholder="Street" required="true">
+
+                    <h3>Area</h3>
+                    <input type="text" name="area" id="area" placeholder="Area" required="true">
+
+                    <h3>District</h3>
+                    <select name="District" id="district" required>
+                    <option value="">Choose</option>
+                    <option value="Udaipur">Udaipur</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+                </article>
+
+                <h2>3. Choose the Test Type</h2>
+
+                <article>
+                    <p>Check atleast one box without fail</p>
+                    <input type="checkbox" id="c1" name="option1" value="CBC">
+                    <label for="c1">CBC</label>
+                    <br>
+                    <input type="checkbox" id="c2" name="option2" value="Complete Urine">
+                    <label for="c2">Complete Urine</label>
+                    <br>
+                    <input type="checkbox" id="c3" name="option3" value="Lipid Profile">
+                    <label for="c3">Lipid Profile</label>
+                    <br>
+                    <input type="checkbox" id="c4" name="option3" value="Thyroid Stimulating Hormone(TSH)">
+                    <label for="c3">Thyroid Stimulating Hormone(TSH)</label>
+                    <br>
+                    <input type="checkbox" id="c4" name="option3" value="Glucose Test">
+                    <label for="c3">Glucose Test</label>
+                    <br>
+                    <input type="checkbox" id="c4" name="option3" value="Hard Copy Not Provided">
+                    <label for="c3">Payment portal issue</label>
+                </article>
+
+                <h2>4. Do you want a hard copy of the report also?</h2>
+
+                <article>
+                    <input type="radio" id="c5" name="option" value="True" required>
+                    <label for="c5">Yes</label>
+                    <br>
+                    <input type="radio" id="c6" name="option" value="False">
+                    <label for="c6">No</label>
+                </article>
+                <h2>4. Select Your Comfortable Date and Time</h2>
+                <article>
+                    <input type="datetime-local" value="datetime-local" required>
+                </article>
+            </form>
+            <button>Reset</button>
+            <button>Submit</button>
+        </div>
+        <div class="img-container">
+            <img src="images/Lab-Test/lab-test.jpg" alt="lab test image">
+        </div>
+    </section>
+</body>
+
+</html>

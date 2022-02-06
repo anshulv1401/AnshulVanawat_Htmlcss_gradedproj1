@@ -1,5 +1,11 @@
 /* General */
 
+body {
+    background-color: honeydew;
+    height: auto;
+    margin: 0%;
+}
+
 .list-unstyled {
     list-style-type: none;
     margin: 0;
@@ -72,24 +78,50 @@ header {
     display: block;
 }
 
+.sub-menu>li:hover {
+    background-color: black;
+}
+
+.sub-menu>li:hover a {
+    color: white;
+}
+
 
 /* Animated Ad Slideshow */
 
-.ad-slideshow {
-    width: 100%;
-    height: 100%;
-    position: relative;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.ad-slideshow>img {
-    width: 100%;
-    height: calc(100vh - 200px);
-    border: solid steelblue;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: 10s autoplay1 infinite
+.ad-slideshow>* {
+    animation: 20s autoplay4 infinite;
+    overflow: hidden;
+    align-items: center;
+}
+
+@keyframes autoplay4 {
+    0% {
+        height: auto;
+        padding: 0.5em 1em;
+        border: thin solid
+    }
+    19.99% {
+        height: auto;
+        padding: 0.5em 1em;
+        border: thin solid
+    }
+    20% {
+        height: 0;
+        padding: 0;
+        border: none
+    }
+    100% {
+        height: 0;
+        padding: 0;
+        border: none
+    }
 }
 
 .ad-slideshow>*:nth-child(1) {
@@ -97,28 +129,19 @@ header {
 }
 
 .ad-slideshow>*:nth-child(2) {
-    animation-delay: 2s
+    animation-delay: -16s
 }
 
 .ad-slideshow>*:nth-child(3) {
-    animation-delay: 4s
+    animation-delay: -12s
 }
 
 .ad-slideshow>*:nth-child(4) {
-    animation-delay: 6s
+    animation-delay: -8s
 }
 
 .ad-slideshow>*:nth-child(5) {
-    animation-delay: 8s
-}
-
-@keyframes autoplay1 {
-    0% {
-        visibility: visible
-    }
-    20% {
-        visibility: hidden
-    }
+    animation-delay: -4s
 }
 
 
@@ -134,9 +157,9 @@ header {
 
 .product-container {
     position: relative;
-    margin: 5px;
-    width: 200px;
-    height: 220px;
+    margin: 20px;
+    width: 230px;
+    height: 230px;
     border: 2px solid green;
     display: inline-block;
     background-color: lavender;
@@ -149,7 +172,7 @@ header {
 
 .product img {
     border-radius: 10px;
-    width: 180px;
+    width: 205px;
     height: 120px;
     align-items: center;
 }
@@ -181,28 +204,15 @@ header {
     display: block;
     width: 165px;
     text-align: center;
-    /* text-decoration: none;
-    padding: 0%;
-    margin: 0%; */
 }
 
-.product>a:focus {
+.product>a:active {
     background-color: rgb(250, 234, 230);
     border-color: rgb(0, 255, 76);
 }
 
 .product-container:hover {
-    width: 220px;
-    height: 240px;
-}
-
-.product-container:hover img {
-    width: 190px;
-    height: 130px;
-}
-
-.product-container:hover a {
-    width: 175px;
+    transform: scale(1.05);
 }
 
 
