@@ -97,9 +97,8 @@ header {
 .ad-slideshow>div>img {
     width: 100%;
     height: auto;
-    max-height: 400px;
-    min-height: 300px;
-    border: solid rgb(11, 12, 14);
+    max-height: calc(100vh - 200px);
+    border: solid steelblue;
     top: 0;
     left: 0;
 }
