@@ -89,28 +89,29 @@ header {
 
 /* Animated Ad Slideshow */
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .ad-slideshow>* {
     animation: 20s autoplay4 infinite;
     overflow: hidden;
-    align-items: center;
+}
+
+.ad-slideshow>div>img {
+    width: 100%;
+    height: calc(100vh - 200px);
+    border: solid steelblue;
+    top: 0;
+    left: 0;
 }
 
 @keyframes autoplay4 {
     0% {
         height: auto;
         padding: 0.5em 1em;
-        border: thin solid
+        border: none
     }
     19.99% {
         height: auto;
         padding: 0.5em 1em;
-        border: thin solid
+        border: none
     }
     20% {
         height: 0;
@@ -202,7 +203,7 @@ header {
     border: 1px solid blueviolet;
     border-radius: 5px;
     display: block;
-    width: 165px;
+    width: 190px;
     text-align: center;
 }
 
